@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function($){
+
+	/* prepend menu icon */
+	$('#nav-wrap').prepend('<div id="menu-icon"><img src="images/menu.png" alt="main menu"/></div>');
+	
+	/* toggle nav */
+	$("#menu-icon").on("click", function(){
+		$("#nav").slideToggle();
+		$(this).toggleClass("active");
+	});
+
+  });
+  </script>
+  <title>Markup & Scripting Final Project</title>
+
+</head>
+
+
+<body>
+
+  <div id="container"> 
+    <header>
+	    <div class="topbar">
+		
+		    <h1>The Beginning Not the End</h1>
+		 <hr>
+			<nav class="nav">
+				 <ul>
+					<li class="btn"><a href="#">Home</a></li>
+					<li class="btn"><a href="#">About</a></li>
+					<li class="btn"><a href="#">Other Links</a></li>
+					<li class="btn"><a href="#">Contact Us</a></li>
+				 </ul>
+			</nav>
+		 </hr>	
+		
+		<!--JavaScript day, date, time--> 
+        <p id="date_time">
+	    <script type="text/javascript">
+	  
+			var b_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+	  
+			var m_names = new Array("January", "February", "March", 
+			"April", "May", "June", "July", "August", "September", 
+			"October", "November", "December");
+
+			var d = new Date();
+			var curr_day = d.getDay();
+			var curr_date = d.getDate();
+			var curr_month = d.getMonth();
+			var curr_year = d.getFullYear();
+			document.write("<b>" + b_names[curr_day] + "," + " " + m_names[curr_month] + " " + curr_date 
+			+ "," + " " + curr_year + "<b>");
+        
+		</script>
+		&nbsp;
+		<script type="text/javascript">
+      
+			var currentTime = new Date()
+			var hours = currentTime.getHours()
+			var minutes = currentTime.getMinutes()
+
+				if (minutes < 10)
+				minutes = "0" + minutes
+
+			var suffix = "AM";
+				if (hours >= 12) {
+				suffix = "PM";
+				hours = hours - 12;
+			}
+				if (hours == 0) {
+				hours = 12;
+			}
+
+			document.write("<b>" + hours + ":" + minutes + " " + suffix + "</b>")
+		</script></p>
+		</div>
+			
+	</header>
+	<!-- end header -->
+<!-- main section -->	
+	<div>  
+	    <table>
+            <tr>
+                <td><img src="images\wilber.jpg" alt="Wilber" height="50" width="50"><a href="http://www.gimp.org/" target="_blank">GIMP 2.8</a></td>
+                <td><img src="images\inkscape-logo.svg" alt="Wilber" height="50" width="50"><a href="http://www.inkscape.org" target="_blank">Inkscape</a></td>
+                <td><img src="images\synfig.jpg" alt="Wilber" height="75" width="50"><a href="http://www.synfig.org/cms/" target="_blank">Synfig</a></td>
+            </tr>
+			<tr>
+                <td><img src="images\blender-plain.jpg" alt="Wilber" height="50" width="100"><a href="http://www.blender.org/" target="_blank">Blender</a></td>
+                <td><img src="images\mixxx.jpg" alt="Wilber" height="50" width="75"><a href="http://www.mixxx.org/" target="_blank">Mixxx</a></td>
+                <td><img src="images\avidemux.jpg" alt="Wilber" height="50" width="50"><a href="http://avidemux.sourceforge.net/index.html" target="_blank">Avidemux</a></td>
+            </tr>
+        </table>
+	
+	</div>
+    	
+  
+   <!-- footer -->
+    <footer>
+		<hr>
+	    <div>
+			<p id="foot">Created by Lyn Eckert on April 13, 2014</p>
+		</div>
+	</footer>
+   <!-- end footer -->
+  
+  </div>  
+<!-- end main -->
+
+</body>
+</html>
