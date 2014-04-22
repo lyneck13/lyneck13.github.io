@@ -1,120 +1,123 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <script type="text/javascript">
-  jQuery(document).ready(function($){
-
-	/* prepend menu icon */
-	$('#nav-wrap').prepend('<div id="menu-icon"><img src="images/menu.png" alt="main menu"/></div>');
-	
-	/* toggle nav */
-	$("#menu-icon").on("click", function(){
-		$("#nav").slideToggle();
-		$(this).toggleClass("active");
-	});
-
-  });
-  </script>
-  <title>Markup & Scripting Final Project</title>
-
+<meta charset="utf-8">
+	<title>Markup & Scripting Final Project</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
-
-
 <body>
+	<div id="wrapper">
+		<header>
+			<h1><a href="index.html"><img src="images\logo-final.png"></a></h1>
+			<!--JavaScript day, date, time--> 
+				<p id="date_time">
+				<script type="text/javascript">
+			  
+					var b_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+			  
+					var m_names = new Array("January", "February", "March", 
+					"April", "May", "June", "July", "August", "September", 
+					"October", "November", "December");
 
-  <div id="container"> 
-    <header>
-	    <div class="topbar">
+					var d = new Date();
+					var curr_day = d.getDay();
+					var curr_date = d.getDate();
+					var curr_month = d.getMonth();
+					var curr_year = d.getFullYear();
+					document.write("<b>" + b_names[curr_day] + "," + " " + m_names[curr_month] + " " + curr_date 
+					+ "," + " " + curr_year + "<b>");
+				
+				</script>
+				&nbsp;
+				<script type="text/javascript">
+			  
+					var currentTime = new Date()
+					var hours = currentTime.getHours()
+					var minutes = currentTime.getMinutes()
+
+						if (minutes < 10)
+						minutes = "0" + minutes
+
+					var suffix = "AM";
+						if (hours >= 12) {
+						suffix = "PM";
+						hours = hours - 12;
+					}
+						if (hours == 0) {
+						hours = 12;
+					}
+
+					document.write("<b>" + hours + ":" + minutes + " " + suffix + "</b>")
+				</script></p>
+		</header>
+		<nav>
+			<ul>
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Other Links</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li>
+			</ul>
+			<div class="clearfix"></div>
+		</nav>
+		<aside>
+			<div id="social">
+				<a target="_blank" href="http://www.facebook.com">
+				<img alt="facebook" src="http://www.w3newbie.com/wp-content/uploads/facebook.png">
+				</a>
+				<a target="_blank" href="http://www.twitter.com">
+				<img alt="twitter" src="http://www.w3newbie.com/wp-content/uploads/twitter.png">
+				</a>
+				<a target="_blank" href="http://www.youtube.com">
+				<img alt="youtube" src="http://www.w3newbie.com/wp-content/uploads/youtube.png">
+				</a>
+				<a target="_blank" href="http://www.accounts.plus.google.com‎">
+				<img alt="google plus" src="http://www.w3newbie.com/wp-content/uploads/google_plus.png">
+				</a>
+				<a target="_blank" href="http://www.github.com‎">
+				<img alt="github" src="images\GitHub-Mark-64px.png">
+				</a>
+			</div>
+		</aside>
+			<section class="left-col">
+				<h3>GIMP 2.8</a></h3>
+				<a href="http://www.gimp.org/" target="_blank"><img src="images\wilber.jpg" alt="Wilber" /></a>
+				<p>GIMP is a GNU Image Manipulation Program. This freely distributed software is used for photo retouching, image composition and image authoring. Supported platforms include Linux,  Windows, Mac OS X.</p>
+			</section>
 		
-		    <h1>The Beginning Not the End</h1>
-		 <hr>
-			<nav class="nav">
-				 <ul>
-					<li class="btn"><a href="#">Home</a></li>
-					<li class="btn"><a href="#">About</a></li>
-					<li class="btn"><a href="#">Other Links</a></li>
-					<li class="btn"><a href="#">Contact Us</a></li>
-				 </ul>
-			</nav>
-		 </hr>	
-		
-		<!--JavaScript day, date, time--> 
-        <p id="date_time">
-	    <script type="text/javascript">
-	  
-			var b_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-	  
-			var m_names = new Array("January", "February", "March", 
-			"April", "May", "June", "July", "August", "September", 
-			"October", "November", "December");
-
-			var d = new Date();
-			var curr_day = d.getDay();
-			var curr_date = d.getDate();
-			var curr_month = d.getMonth();
-			var curr_year = d.getFullYear();
-			document.write("<b>" + b_names[curr_day] + "," + " " + m_names[curr_month] + " " + curr_date 
-			+ "," + " " + curr_year + "<b>");
-        
-		</script>
-		&nbsp;
-		<script type="text/javascript">
-      
-			var currentTime = new Date()
-			var hours = currentTime.getHours()
-			var minutes = currentTime.getMinutes()
-
-				if (minutes < 10)
-				minutes = "0" + minutes
-
-			var suffix = "AM";
-				if (hours >= 12) {
-				suffix = "PM";
-				hours = hours - 12;
-			}
-				if (hours == 0) {
-				hours = 12;
-			}
-
-			document.write("<b>" + hours + ":" + minutes + " " + suffix + "</b>")
-		</script></p>
-		</div>
+			<section class="sidebar">
+				<h3>Inkscape</a></h3>
+				<a href="http://www.inkscape.org" target="_blank"><img src="images\inkscape-logo.svg" alt="Inkscape logo" /></a>
+				<p>Inkscape is a professional free and open source vector graphics editor for Windows, Mac OS X and Linux. Features include flexible drawing tools, broad file format compatibility, powerful text tool.</p>
+			</section>
 			
-	</header>
-	<!-- end header -->
-<!-- main section -->	
-	<div>  
-	    <table>
-            <tr>
-                <td><img src="images\wilber.jpg" alt="Wilber" height="50" width="50"><a href="http://www.gimp.org/" target="_blank">GIMP 2.8</a></td>
-                <td><img src="images\inkscape-logo.svg" alt="Wilber" height="50" width="50"><a href="http://www.inkscape.org" target="_blank">Inkscape</a></td>
-                <td><img src="images\synfig.jpg" alt="Wilber" height="75" width="50"><a href="http://www.synfig.org/cms/" target="_blank">Synfig</a></td>
-            </tr>
-			<tr>
-                <td><img src="images\blender-plain.jpg" alt="Wilber" height="50" width="100"><a href="http://www.blender.org/" target="_blank">Blender</a></td>
-                <td><img src="images\mixxx.jpg" alt="Wilber" height="50" width="75"><a href="http://www.mixxx.org/" target="_blank">Mixxx</a></td>
-                <td><img src="images\avidemux.jpg" alt="Wilber" height="50" width="50"><a href="http://avidemux.sourceforge.net/index.html" target="_blank">Avidemux</a></td>
-            </tr>
-        </table>
-	
+			<section class="left-col">
+				<h3>Synfig</a></h3>
+				<a href="http://www.synfig.org/cms/" target="_blank"><img src="images\synfig.jpg" alt="Synfig logo" /></a>
+				<p>Synfig Studio is a free and open-source 2D animation software, designed as powerful industrial-strength solution for creating film-quality animation using a vector and bitmap artwork.</p>
+			</section>
+			
+			<section class="sidebar">
+				<h3>Blender</a></h3>
+				<a href="http://www.blender.org/" target="_blank"><img src="images\blender-plain.jpg" alt="Blender logo" /></a>
+				<p>Blender is a free and open-source 3D animation suite. It supports all aspects of 3D animation-modeling, rigging, animation, simulation, rendering, composting and motion tracking.</p>
+			</section>
+			<section class="left-col">
+				<h3>Mixxx</a></h3>
+				<a href="http://www.mixxx.org/" target="_blank"><img src="images\mixxx.jpg" alt="Mixxx logo" /></a>
+				<p>Mixxx provides everything you need to start making DJ mixes. Whether you're DJing your next house party, spinning at a club, or broadcasting as a radio DJ, Mixxx has what you need to do it right. </p>
+			</section>
+			<section class="sidebar">
+				<h3>Avidemux</a></h3>
+				<a href="http://www.avidemux.sourceforge.net/" target="_blank"><img src="images\avidemux.jpg" alt="Aviemux logo" /></a>
+				<p>Avidemux is a free video editor designed for basic cutting, filtering and encoding undertaking. It can be used with many file types, including AVI, DVD compatible MPEG files, MP4 and ASF.</p>
+			</section>
+			<div class="clearfix"></div>	
+			<footer>
+				<h3>Created by Lyn Eckert on April 18, 2014</h3>
+			</footer>
 	</div>
-    	
-  
-   <!-- footer -->
-    <footer>
-		<hr>
-	    <div>
-			<p id="foot">Created by Lyn Eckert on April 13, 2014</p>
-		</div>
-	</footer>
-   <!-- end footer -->
-  
-  </div>  
-<!-- end main -->
-
 </body>
 </html>
