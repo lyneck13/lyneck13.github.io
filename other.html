@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Markup & Scripting Final Project</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1><a href="index.html"><img src="images\logo-final.png"></a></h1>
+			<!--JavaScript day, date, time--> 
+				<p id="date_time">
+				<script type="text/javascript">
+			  
+					var b_names = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+			  
+					var m_names = new Array("January", "February", "March", 
+					"April", "May", "June", "July", "August", "September", 
+					"October", "November", "December");
+
+					var d = new Date();
+					var curr_day = d.getDay();
+					var curr_date = d.getDate();
+					var curr_month = d.getMonth();
+					var curr_year = d.getFullYear();
+					document.write("<b>" + b_names[curr_day] + "," + " " + m_names[curr_month] + " " + curr_date 
+					+ "," + " " + curr_year + "<b>");
+				
+				</script>
+				&nbsp;
+				<script type="text/javascript">
+			  
+					var currentTime = new Date()
+					var hours = currentTime.getHours()
+					var minutes = currentTime.getMinutes()
+
+						if (minutes < 10)
+						minutes = "0" + minutes
+
+					var suffix = "AM";
+						if (hours >= 12) {
+						suffix = "PM";
+						hours = hours - 12;
+					}
+						if (hours == 0) {
+						hours = 12;
+					}
+
+					document.write("<b>" + hours + ":" + minutes + " " + suffix + "</b>")
+				</script></p>
+		</header>
+		<nav>
+			<ul>
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Other Links</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li>
+			</ul>
+			<div class="clearfix"></div>
+		</nav>
+		<aside>
+			<div id="social">
+				<a target="_blank" href="http://www.facebook.com">
+				<img alt="facebook" src="http://www.w3newbie.com/wp-content/uploads/facebook.png">
+				</a>
+				<a target="_blank" href="http://www.twitter.com">
+				<img alt="twitter" src="http://www.w3newbie.com/wp-content/uploads/twitter.png">
+				</a>
+				<a target="_blank" href="http://www.youtube.com">
+				<img alt="youtube" src="http://www.w3newbie.com/wp-content/uploads/youtube.png">
+				</a>
+				<a target="_blank" href="http://www.accounts.plus.google.com‎">
+				<img alt="google plus" src="http://www.w3newbie.com/wp-content/uploads/google_plus.png">
+				</a>
+				<a target="_blank" href="http://www.github.com‎">
+				<img alt="github" src="images/GitHub-Mark-64px.png">
+				</a>
+			</div>
+		</aside>
+			<section class="left-col">
+				<h3>GIMP 2.8</a></h3>
+				<img src="images/wilber.jpg" alt="GIMP logo" />
+				<ul class="links">
+					
+					<li><a href="http://www.gimp.org/downloads/" target="blank">Download</a></li>
+					<li><a href="http://www.gimp.org/docs/" target="blank">GIMP User Manual</a></li>
+					<li><a href="http://www.gimp.org/tutorials/Floating_Logo/" target="blank">Beginner - Simple Floating Logo Tutorial</a></li>
+					<li><a href="http://www.gimp.org/tutorials/3d_Logo/" target="blank">Intermediate - 3D Floating Logo Tutorial</a></li>
+					<li><a href="http://www.gimp.org/tutorials/Creating_Icons/" target="blank">Advanced - Creating Icons Tutorial</a></li>
+				</ul>
+			</section>
+		
+			<section class="sidebar">
+				<h3>Inkscape</a></h3>
+				<img src="images/inkscape-logo.svg" alt="inkscape logo" />
+				<ul class="links">
+					
+					<li><a href="http://www.inkscape.org/en/download/" target="blank">Download</a></li>
+					<li><a href="http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CDUQFjAB&url=http%3A%2F%2Fwww.valo-cd.net%2Fguides%2Fflossmanuals-inkscape.pdf&ei=ZpJWU7OwIY_LsQTUo4KADg&usg=AFQjCNFK069UlRzRMDNFd2VKDCH2w7oZvg&bvm=bv.65177938,d.cWc" target="blank">Inkscape User Manual</a></li>
+					<li><a href="http://design.tutsplus.com/tutorials/how-to-create-a-vector-light-bulb-icon-with-inkscape--vector-1299" target="blank">Beginner - Create a Light Bulb Icon Tutorial</a></li>
+					<li><a href="http://www.penguintutorials.com/tutorials/inkscape/curved-gradients" target="blank">Intermediate - Curved Gradients Tutorial</a></li>
+					<li><a href="http://libregraphicsworld.org/blog/entry/drawing-3d-objects-in-inkscape" target="blank">Advanced - Drawing Snowman in 3D Tutorial</a></li>
+				</ul>
+			</section>
+			
+			<section class="left-col">
+				<h3>Synfig</a></h3>
+				<img src="images/synfig.jpg" alt="Synfig logo" />
+				<ul class="links">
+					
+					<li><a href="http://www.synfig.org/cms/en/download/" target="blank">Download</a></li>
+					<li><a href="http://wiki.synfig.org/wiki/User_Documentation" target="blank">Synfig User Manual</a></li>
+					<li><a href="http://www.youtube.com/watch?v=CggO49WyGwo" target="blank">Beginner - Introduction to Synfig Tutorial</a></li>
+					<li><a href="http://www.youtube.com/watch?v=mMn5wvMnXvk" target="blank">Intermediate - Walking Legs Animation Tutorial</a></li>
+					<li><a href="http://www.penguintutorials.com/tutorials/synfig/dump-truck-animation" target="blank">Advanced - Dump Truck Animation Tutorial</a></li>
+				</ul>
+			</section>
+			
+			<section class="sidebar">
+				<h3>Blender</a></h3>
+				<img src="images/blender-plain.jpg" alt="Blender logo" />
+				<ul class="links">
+					
+					<li><a href="http://www.blender.org/download/" target="blank">Download</a></li>
+					<li><a href="http://wiki.blender.org/index.php/Doc:2.6/Manual/Introduction/Downloads" target="blank">Blender User Manual</a></li>
+					<li><a href="http://blendtuts.com/anamorphic" target="blank">Beginner - Create a  Anamorphic Tutorial</a></li>
+					<li><a href="http://www.blendtuts.com/3dlogo" target="blank" >Intermediate - Create a 3D Logo Tutorial</a></li>
+					<li><a href="http://blendtuts.com/quick_projection" target="blank">Advanced - Quick Projection Tutorial</a></li>
+				</ul>
+			</section>
+			<section class="left-col">
+				<h3>Mixxx</a></h3>
+				<img src="images/mixxx.jpg" alt="Mixxx logo" />
+				<ul class="links">
+					<li><a href="http://www.mixxx.org/download/" target="blank">Download</a></li>
+					<li><a href="http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CDMQFjAC&url=http%3A%2F%2Fwww.mixxx.org%2FMixxx-Manual.pdf&ei=DJtWU_LcPOjLsQSo1ILIBw&usg=AFQjCNFUCN5FP726Y9wQlbpfcNgKcXd2_Q&bvm=bv.65177938,d.cWc" target="blank">Mixxx User Manual</a></li>
+					<li><a href="http://www.youtube.com/watch?v=oCw0NulpUv4" target="blank">Mixxx Overview</a></li>
+					<li><a href="http://www.youtube.com/watch?v=cy5kkHKBOgM" target="blank" >How to Use Mixxx</a></li>
+					<li><a href="http://www.mixxx.org/wiki/doku.php/how_to_match_beats" target="blank">Mixxx How to Match Beats</a></li>
+				</ul>
+			</section>
+			<section class="sidebar">
+				<h3>Avidemux</a></h3>
+				<img src="images/avidemux.jpg" alt="Avidemux logo" />
+				<ul class="links">
+					<li><a href="http://avidemux.sourceforge.net/download.html" target="blank">Download</a></li>
+					<li><a href="http://www.avidemux.org/admWiki/doku.php?id=start" target="blank">Avidemux User Manual</a></li>
+					<li><a href="http://www.youtube.com/watch?v=1br7DGozkKU" target="blank">How to Join Two Videos</a></li>
+					<li><a href="http://www.avidemux.org/admWiki/doku.php?id=tutorial:create_video_from_still_image_and_from_audio_file" target="blank" >Create Video from Still Image and Audio File</a></li>
+					<li><a href="http://www.engagemedia.org/Members/datakid/tutorial-splitting-a-large-file-using-avidemux" target="blank">Splitting a large file using Avidemux</a></li>
+				</ul>
+			</section>
+			<div class="clearfix"></div>	
+			<footer>
+				<h3>Created by Lyn Eckert on April 22, 2014</h3>
+			</footer>
+	</div>
+</body>
+</html>
