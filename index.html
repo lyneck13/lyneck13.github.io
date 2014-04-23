@@ -9,9 +9,7 @@
 <body>
 	<div id="wrapper">
 		<header>
-	/*begin res nav*/	  $( '#dl-menu' ).dlmenu({
-    animationClasses : { classin : 'animation-class-name', classout : 'animation-class-name' }
-}); /*end res nav*/
+
 			<h1><a href="index.html"><img src="images/logo-final.png"></a></h1>
 			<!--JavaScript day, date, time--> 
 				<p id="date_time">
@@ -53,6 +51,9 @@
 
 					document.write("<b>" + hours + ":" + minutes + " " + suffix + "</b>")
 				</script></p>
+				/*begin res nav*/	  $( '#dl-menu' ).dlmenu({
+    animationClasses : { classin : 'animation-class-name', classout : 'animation-class-name' }
+}); /*end res nav*/
 		</header>
 		<div id="dl-menu" class="dl-menuwrapper">
 		  <button class="dl-trigger">Open Menu</button>
