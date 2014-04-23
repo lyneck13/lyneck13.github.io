@@ -40,7 +40,7 @@ header {
     padding: 5px;
     text-align: center;
 }
-/*nav {
+nav {
     background: none repeat scroll 0 0 #A09885;
     border-radius: 10px;
     margin: 0;
@@ -62,47 +62,8 @@ nav a:hover, nav li.active a {
     background-color: #322F2C;
     color: #FFFFFF;
 
-}*/
-
-/* new responsive nav*/
-
-.dl-menu.dl-animate-out-1 {
-    animation: MenuAnimOut1 0.4s liner forwards;
 }
 
-@keyframes MenuAnimOut1 {
-    50% {
-        transform: translateZ(-250px) rotateY(30deg);
-    }
-    75% {
-        transform: translateZ(-372.5px) rotateY()15deg);
-        opacity: .5;
-    }
-    100% {
-        transform: translateZ(-500px) rotateY(0deg);
-        opacity: 0;
-    }
-  }
-.dl-menu.dl-animate-in-1 {
-    animation: MenuAnimIn1 0.3s linear forwards;
-}
- 
-@keyframes MenuAnimIn1 {
-    0% {
-        transform: translateZ(-500px) rotateY(0deg);
-        opacity: 0;
-    }
-    20% {
-        transform: translateZ(-250px) rotateY(30deg);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateZ(0px) rotateY(0deg);
-        opacity: 1;
-    }
-}
-
-/*end responsive nav*/
 
 .clearfix {
     clear: both;
