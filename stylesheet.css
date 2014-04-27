@@ -188,18 +188,24 @@ body {
 
 /* nav */
 .nav {
+	background: none repeat scroll 0 0 #A09885;
+        border-radius: 10px;
 	position: relative;
 	margin: 20px 0;
 }
 .nav ul {
+	list-style: none outside none;
+        margin-left: 7%;
 	margin: 0;
 	padding: 0;
 }
 .nav li {
-	margin: 0 5px 10px 0;
+	color: #000000;
+	margin-left: 7%;
 	padding: 0;
 	list-style: none;
 	display: inline-block;
+	list-style: none outside none;
 }
 .nav a {
 	padding: 3px 12px;
@@ -208,15 +214,17 @@ body {
 	line-height: 100%;
 }
 .nav a:hover {
+	background-color: #322F2C;
+	color: #ffffff;
 	color: #000;
 }
 .nav .current a {
-	background: #999;
-	color: #fff;
+	background-color: #322F2C;
+	color: #ffffff;
 	border-radius: 5px;
 }
 
-/* orignal nav
+/* orig nav */
 @media screen and (max-width: 740px) {
 .left-col {
     width: 100%;
@@ -224,7 +232,7 @@ body {
 .sidebar {
     width: 100%;
 }
-}*/
+}
 
 /*trial media nav*/
 
@@ -271,12 +279,6 @@ body {
 	}
 	.nav ul:hover .current {
 		background: url(images/icon-check.png) no-repeat 10px 7px;
-	}
-
-	/* right nav */
-	.nav.right ul {
-		left: auto;
-		right: 0;
 	}
 
 	/* center nav */
