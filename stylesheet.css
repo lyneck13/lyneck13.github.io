@@ -41,7 +41,7 @@ header {
     text-align: center;
 }
 
-/* original nav
+
 nav {
     background: none repeat scroll 0 0 #A09885;
     border-radius: 10px;
@@ -64,7 +64,7 @@ nav a:hover, nav li.active a {
     background-color: #322F2C;
     color: #FFFFFF;
 
-}*/
+}
 
 
 .clearfix {
@@ -184,45 +184,6 @@ body {
 }
 }
 
-/*trial nav*/
-
-/* nav */
-.nav {
-	background: none repeat scroll 0 0 #A09885;
-        border-radius: 10px;
-	position: relative;
-	margin: 20px 0;
-}
-.nav ul {
-	list-style: none outside none;
-        margin-left: 7%;
-	margin: 0;
-	padding: 0;
-}
-.nav li {
-	color: #000000;
-	margin-left: 7%;
-	padding: 0;
-	list-style: none;
-	display: inline-block;
-	list-style: none outside none;
-}
-.nav a {
-	padding: 3px 12px;
-	text-decoration: none;
-	color: #999;
-	line-height: 100%;
-}
-.nav a:hover {
-	background-color: #322F2C;
-	color: #ffffff;
-	color: #000;
-}
-.nav .current a {
-	background-color: #322F2C;
-	color: #ffffff;
-	border-radius: 5px;
-}
 
 /* orig nav */
 @media screen and (max-width: 740px) {
@@ -234,57 +195,3 @@ body {
 }
 }
 
-/*trial media nav*/
-
-@media screen and (max-width: 600px) {
-	.nav {
-		position: relative;
-		min-height: 40px;
-	}	
-	.nav ul {
-		width: 180px;
-		padding: 5px 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		border: solid 1px #aaa;
-		background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
-		border-radius: 5px;
-		box-shadow: 0 1px 2px rgba(0,0,0,.3);
-	}
-	.nav li {
-		display: none; /* hide all <li> items */
-		margin: 0;
-	}
-	.nav .current {
-		display: block; /* show only current <li> item */
-	}
-	.nav a {
-		display: block;
-		padding: 5px 5px 5px 32px;
-		text-align: left;
-	}
-	.nav .current a {
-		background: none;
-		color: #666;
-	}
-
-	/* on nav hover */
-	.nav ul:hover {
-		background-image: none;
-	}
-	.nav ul:hover li {
-		display: block;
-		margin: 0 0 5px;
-	}
-	.nav ul:hover .current {
-		background: url(images/icon-check.png) no-repeat 10px 7px;
-	}
-
-	/* center nav */
-	.nav.center ul {
-		left: 50%;
-		margin-left: -90px;
-	}
-	
-}
